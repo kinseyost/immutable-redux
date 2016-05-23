@@ -1,3 +1,1 @@
-# Redux Immutable React Webpack
-
-This is a demo of working with unidirectional data flow in an immutable store.
+A playground featuring the power of [react](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [immutablejs](https://facebook.github.io/immutable-js/).

@@ -1,0 +1,51 @@
+{
+  "name": "immutable-redux",
+  "version": "1.0.0",
+  "description": "A playground for working with react, redux, and immutablejs",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kinseyost/immutable-redux.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "immutablejs",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Kinsey Van Ost <kinsey.vanost@gmail.com> (http://github.com/kinseyost)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kinseyost/immutable-redux/issues"
+  },
+  "homepage": "https://github.com/kinseyost/immutable-redux",
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^2.10.2",
+    "eslint-plugin-react": "^5.1.1",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "redux": "^3.5.2"
+  }
+}
