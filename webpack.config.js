@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -13,14 +14,24 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/',
   },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'src'),
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+        ),
+      },
+    ],
+  },
+  postcss: [require('autoprefixer')],
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('style.css', { allChunks: true }),
   ],
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src'),
-    }],
-  },
 };
