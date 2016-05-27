@@ -17,6 +17,7 @@
     "reactjs",
     "boilerplate",
     "hot",
+    "react-router",
     "reload",
     "hmr",
     "live",
