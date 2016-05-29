@@ -11,6 +11,11 @@ What you get:
 * ES6(ES2015)/ES7 and [jsx](https://facebook.github.io/react/docs/jsx-in-depth.html) syntax using [babel](https://babeljs.io/)
 * [eslint](http://eslint.org/) - Static analysis of your code.
 
+Some important things to consider with immutable data:
+
+The main argument for using immutable data is that When passing immutable data into 
+your component, on `shouldComponentUpdate`, you can use `===` comparison of the data.
+
 To get going, just run:
 ```
 npm install; npm start
