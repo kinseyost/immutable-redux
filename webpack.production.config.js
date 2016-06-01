@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-source-map',
+  devtool: 'cheap-module-source-map',
   entry: [
     './src/index',
   ],
