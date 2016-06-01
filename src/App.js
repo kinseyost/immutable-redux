@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import styles from './App.css';
-import { Link } from 'react-router';
+import Navbar from './components/Navbar.js';
 
 const propTypes = {
   children: PropTypes.element,
@@ -8,12 +8,13 @@ const propTypes = {
 
 export default function App(props) {
   return (
-    <div className={ styles.Body }>
-      <ul>
-        <li><Link to="/page1">About</Link></li>
-        <li><Link to="/page2">Inbox</Link></li>
-      </ul>
-      { props.children }
+    <div className={ styles.Skeleton }>
+      <div className={ styles.Header }>
+        <Navbar />
+      </div>
+      <div className={ styles.Content }>
+        { props.children }
+      </div>
     </div>
   );
 }

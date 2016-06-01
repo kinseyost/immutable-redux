@@ -1,4 +1,14 @@
-.Body {
-  background: black;
-  color: white;
+.Skeleton {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Header {
+  flex: 0 auto;
+  background: #ddd;
+}
+
+.Content {
+  flex: 1 auto;
 }

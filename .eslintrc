@@ -203,7 +203,7 @@
     "id-length": 0, // this option enforces minimum and maximum identifier lengths (variable names, property names etc.)
     "id-match": 0, // require identifiers to match the provided regular expression
     "indent": [2, 2, {"SwitchCase": 1}], // specify tab or space width for your code (fixable)
-    "jsx-quotes": [2, "prefer-double"], // specify whether double or single quotes should be used in JSX attributes (fixable)
+    "jsx-quotes": [2, "prefer-single"], // specify whether double or single quotes should be used in JSX attributes (fixable)
     "key-spacing": [2, {"beforeColon": false, "afterColon": true}], // enforce spacing between keys and values in object literal properties
     "keyword-spacing": [2, {"before": true, "after": true}], // enforce spacing before and after keywords (fixable)
     "linebreak-style": [0], // disallow mixed 'LF' and 'CRLF' as linebreaks
