@@ -3,7 +3,7 @@ import styles from './App.css';
 import { Link } from 'react-router';
 
 const propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.element,
 };
 
 export default function App(props) {
