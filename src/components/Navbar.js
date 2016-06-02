@@ -10,8 +10,8 @@ const propTypes = {
 export default function Navbar() {
   return (
     <ul className={ styles.Navbar }>
-      <NavItem to='/page1'>Page</NavItem>
-      <NavItem to='/page2'>Page</NavItem>
+      <NavItem to='/page1'>Page 1</NavItem>
+      <NavItem to='/page2'>Page 2</NavItem>
     </ul>
   );
 }

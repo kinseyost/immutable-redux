@@ -1,6 +1,7 @@
 .NavItem {
   padding: 4px 7px;
+  background: #333;
   color: white;
-  border: 1px solid #555;
-  margin-left: -1px;
+  border: 1px solid #ddd;
+  margin-left: 10px;
 }
