@@ -14,7 +14,7 @@ What you get:
 
 Why you should use immutable data:
 
-When passing immutable data into your component, you will gain great benefits with rendering. On `shouldComponentUpdate`, you can use `===` comparison of the data. 
+When passing immutable data into your component, you will gain great benefits with rendering due to the fact that on `shouldComponentUpdate`, you can use `===` comparison of the data. 
 
 To get going, just run:
 ```
