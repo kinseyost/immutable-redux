@@ -5,3 +5,10 @@
   border: 1px solid #ddd;
   margin-left: 10px;
 }
+
+.ActiveLink {
+  composes: NavItem;
+  background: white;
+  color: #333;
+  border-bottom: none;
+}
