@@ -14,12 +14,17 @@ What you get:
 
 Some important things to consider with immutable data:
 
-The main argument for using immutable data is that When passing immutable data into 
+The main argument for using immutable data is that When passing immutable data into
 your component, on `shouldComponentUpdate`, you can use `===` comparison of the data.
 
 To get going, just run:
 ```
 npm install; npm start
+```
+
+To build production:
+```
+npm run build
 ```
 
 Linting in atom can be enabled by entering this command into your :
