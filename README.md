@@ -1,4 +1,4 @@
-## immutable-redux-boilerplate
+## immutable-redux
 The *perfect* framework for your next cross-platform, enterprise web-application using [react](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [immutable](https://facebook.github.io/immutable-js/).
 There are so many libraries to choose from these days. A few of them come running to the forefront when it comes to developing your next website or application.
 This project is set up to get your project into motion with the latest and greatest simply by adding to this setup.  
@@ -33,3 +33,7 @@ Linting in atom can be enabled by entering this command into your terminal:
 ```
 apm install linter linter-eslint
 ```
+
+Special thanks to [facebook](https://github.com/facebook), [Evil Martians](https://evilmartians.com/?utm_source=postcss), and some github heroes [@gaearon](https://github.com/gaearon), [@erikras](https://github.com/erikras), [@leebyron](https://github.com/leebyron), [@acdlite](https://github.com/acdlite), [@christianalfoni](https://github.com/christianalfoni), and many more.
+
+This framework is only the beginning. There are hundreds of other resources out there.  All you gotta do is look for them. You can start [here](https://github.com/reactjs).
