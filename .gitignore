@@ -2,7 +2,4 @@ node_modules
 npm-debug.log
 .DS_Store
 dist
-public/bundle.js
-public/bundle.js.map
-public/style.css
-public/style.css.map
+public
