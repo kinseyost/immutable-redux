@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack -p --config webpack.production.config.js --progress",
+    "postinstall": "npm build",
     "lint": "eslint src"
   },
   "repository": {
