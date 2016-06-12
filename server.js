@@ -1,25 +1,45 @@
-const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000;
+const path = require('path');
+const express = require('express');
+const webpack = require('webpack');
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const config = require('./webpack.config.js');
 
-if (process.env.NODE_ENV !== 'production') {
-  const config = require('./webpack.config');
-  const webpack = require('webpack');
-  const WebpackDevServer = require('webpack-dev-server');
-  new WebpackDevServer(webpack(config), {
+const isDeveloping = process.env.NODE_ENV !== 'production';
+const port = isDeveloping ? 3000 : process.env.PORT;
+const app = express();
+
+if (isDeveloping) {
+  const compiler = webpack(config);
+  const middleware = webpackMiddleware(compiler, {
     publicPath: config.output.publicPath,
-    hot: true,
-    historyApiFallback: true
-  }).listen(port, 'localhost', function (err, result) {
-    if (err) {
-      return console.log(err);
-    }
+    contentBase: 'src',
+    stats: {
+      colors: true,
+      hash: false,
+      timings: true,
+      chunks: false,
+      chunkModules: false,
+      modules: false,
+    },
+  });
 
-    console.log('Listening at http://localhost:/' + port);
+  app.use(middleware);
+  app.use(webpackHotMiddleware(compiler));
+  app.get('*', function response(req, res) {
+    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
+    res.end();
   });
 } else {
-  const express = require('express');
-  const app = express();
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/dist'));
   app.get('*', function response(req, res) {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 }
+
+app.listen(port, '0.0.0.0', function onStart(err) {
+  if (err) {
+    console.log(err);
+  }
+  console.info('==> 🌎 Listening on port %s. Open up http://0.0.0.0:%s/ in your browser.', port, port);
+});
