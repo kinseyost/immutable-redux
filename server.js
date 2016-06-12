@@ -1,6 +1,6 @@
 const path = require('path');
-const app = express();
 const express = require('express');
+const app = express();
 const webpack = require('webpack');
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
