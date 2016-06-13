@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack -p --config webpack.production.config.js --progress",
-    "postinstall": "deploy.js",
+    "postinstall": "node deploy",
     "lint": "eslint src"
   },
   "repository": {
@@ -65,6 +65,6 @@
     "redux-thunk": "^2.1.0",
     "reselect": "^2.5.1",
     "stats-webpack-plugin": "^0.3.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
   }
 }
