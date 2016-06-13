@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack -p --config webpack.production.config.js --progress",
-    "postinstall": "node deploy",
+    "postinstall": "npm install autoprefixer babel webpack html-webpack-plugin extract-text-webpack-plugin stats-webpack-plugin; node deploy",
     "lint": "eslint src"
   },
   "repository": {
