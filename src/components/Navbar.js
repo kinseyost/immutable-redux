@@ -3,7 +3,10 @@ import styles from './Navbar.css';
 import NavItem from './NavItem.js';
 
 const propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.array,
+  ]),
   to: PropTypes.string,
 };
 

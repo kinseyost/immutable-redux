@@ -3,7 +3,10 @@ import { Link } from 'react-router';
 import styles from './NavItem.css';
 
 const propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
   to: PropTypes.string,
 };
 
