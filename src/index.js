@@ -6,6 +6,8 @@ import store from './store';
 import App from './App';
 import Page1 from './components/Page1.js';
 import Page2 from './components/Page2.js';
+// styles reset
+import './styles/reset.css';
 
 ReactDOM.render(
   <Provider store={ store }>
