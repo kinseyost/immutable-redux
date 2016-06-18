@@ -8,6 +8,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
 
 module.exports = {
+
+  devtool: 'cheap-source-map',
+
   entry: [
     path.join(__dirname, 'src/index.js'),
   ],
@@ -24,6 +27,7 @@ module.exports = {
       filename: 'index.html',
     }),
     new ExtractTextPlugin('[name]-[hash].min.css'),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,
@@ -35,7 +39,7 @@ module.exports = {
       modules: false,
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
   module: {
