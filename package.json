@@ -23,7 +23,8 @@
     "hmr",
     "live",
     "edit",
-    "webpack"
+    "webpack",
+    "heroku"
   ],
   "author": "Kinsey Van Ost <kinsey.vanost@gmail.com> (http://github.com/kinseyost)",
   "license": "MIT",
