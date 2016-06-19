@@ -4,6 +4,8 @@ const app = express();
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 
+app.set('port', (process.env.PORT || 3000));
+
 if (isDeveloping) {
   const webpack = require('webpack');
   const config = require('./webpack.config.js');
