@@ -38,7 +38,7 @@ if (isDeveloping) {
   });
 }
 
-app.listen(port, 'localhost', function onStart(err) {
+app.listen(port, function onStart(err) {
   if (err) {
     console.log(err);
   }
