@@ -4,6 +4,7 @@
   "description": "A playground for working with react, redux, and immutablejs",
   "scripts": {
     "start": "node server.js",
+    "startServer": "node server/index.js",
     "build": "webpack -p --config webpack.production.config.js --progress",
     "lint": "eslint src"
   },

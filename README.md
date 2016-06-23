@@ -23,7 +23,10 @@ To get going, just run:
 ```
 npm install; npm start
 ```
-
+And start the server:
+```
+npm run startServer
+```
 ## Production:
 Depending on how you want to go about deploying your web-app, this project is equipped to automatically deploy a web-server to serve static-content of your app on Heroku. However, you can easily build the app and deploy manually wherever you want.
 
