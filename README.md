@@ -1,4 +1,4 @@
-## immutable-redux
+# immutable-redux
 The *perfect* framework for your next cross-platform, enterprise web-application using [react](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [immutable](https://facebook.github.io/immutable-js/).
 There are so many libraries to choose from these days. A few of them come running to the forefront when it comes to developing your next website or application.
 This project is set up to get your project into motion with the latest and greatest simply by adding to this setup.  
@@ -14,7 +14,7 @@ What you get:
 * [css-modules](https://github.com/css-modules/css-modules) - Hashed classNames to prevent className collisions
 * [postcss](https://github.com/postcss/postcss) - Toolbelt for all your future css needs.
 * [eslint](http://eslint.org/) - Static analysis of your code
-
+* [heroku](https://devcenter.heroku.com/) - Automated deployment using `git push heroku`
 Why you should use immutable data:
 
 When passing immutable props into your component, you will gain substantial improvements to updates when rendering. When working with `react-redux`, your `@connect`ed props will utilize [shallow-render](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js), which during `shouldComponentUpdate` can utilize `===` to compare immutable props to determine whether or not the component should update.
@@ -24,7 +24,16 @@ To get going, just run:
 npm install; npm start
 ```
 
-To build production:
+## Production:
+Depending on how you want to go about deploying your web-app, this project is equipped to automatically deploy a web-server to serve static-content of your app on Heroku. However, you can easily build the app and deploy manually wherever you want.
+
+### Heroku 
+Follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to get heroku toolbelt on your machine, make sure all of your code is checked in, and type:
+```
+git push heroku
+```
+### Build Production ready bundle
+This will issue a command for webpack to bundle all of your js and css and insert their hashed names into /public/index.html.
 ```
 npm run build
 ```
@@ -37,3 +46,4 @@ apm install linter linter-eslint
 Special thanks to [facebook](https://github.com/facebook), [Evil Martians](https://evilmartians.com/?utm_source=postcss), and some github heroes [@gaearon](https://github.com/gaearon), [@erikras](https://github.com/erikras), [@leebyron](https://github.com/leebyron), [@acdlite](https://github.com/acdlite), [@christianalfoni](https://github.com/christianalfoni), and many more.
 
 This framework is only the beginning. There are hundreds of other resources out there.  All you gotta do is look for them. You can start [here](https://github.com/reactjs).
+
