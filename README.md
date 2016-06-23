@@ -28,7 +28,10 @@ npm install; npm start
 Depending on how you want to go about deploying your web-app, this project is equipped to automatically deploy a web-server to serve static-content of your app on Heroku. However, you can easily build the app and deploy manually wherever you want.
 
 ### Heroku 
-Follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to get heroku toolbelt on your machine, make sure all of your code is checked in, and type:
+* Follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to get heroku toolbelt on your machine
+* Check in all your code using git
+* Deploy your web-app using [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app) 
+After that, you can push up all of your changes to heroku and heroku will run all of the necessary scripts added to **Procfile** in the root of this project
 ```
 git push heroku
 ```
