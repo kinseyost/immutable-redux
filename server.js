@@ -5,8 +5,6 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
 const host = process.env.IP;
 
-console.log('host=', host);
-
 app.set('port', (port));
 
 if (isDeveloping) {
