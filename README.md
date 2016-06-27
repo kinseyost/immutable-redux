@@ -16,7 +16,7 @@ What you get:
 * [eslint](http://eslint.org/) - Static analysis of your code
 * [heroku](https://devcenter.heroku.com/) - Automated deployment using `git push heroku`
 * [mongodb](https://docs.mongodb.com/) - Document based database
-* [mongoose](http://mongoosejs.com/index.html) - javascript ORM for mongodb
+* [mongoose](http://mongoosejs.com/index.html) - javascript ODM for mongodb
 
 Why you should use immutable data:
 
