@@ -15,6 +15,9 @@ What you get:
 * [postcss](https://github.com/postcss/postcss) - Toolbelt for all your future css needs.
 * [eslint](http://eslint.org/) - Static analysis of your code
 * [heroku](https://devcenter.heroku.com/) - Automated deployment using `git push heroku`
+* [mongodb](https://docs.mongodb.com/) - Document based database
+* [mongoose](http://mongoosejs.com/index.html) - javascript ORM for mongodb
+
 Why you should use immutable data:
 
 When passing immutable props into your component, you will gain substantial improvements to updates when rendering. When working with `react-redux`, your `@connect`ed props will utilize [shallow-render](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js), which during `shouldComponentUpdate` can utilize `===` to compare immutable props to determine whether or not the component should update.
