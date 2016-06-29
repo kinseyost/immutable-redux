@@ -37,6 +37,7 @@ Depending on how you want to go about deploying your web-app, this project is eq
 * Follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to get heroku toolbelt on your machine
 * Check in all your code using git
 * Deploy your web-app using [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app) 
+  - TODO working on a docker image which can be deployed to heroku with one easy step
 After that, you can push up all of your changes to heroku and heroku will run all of the necessary scripts added to **Procfile** in the root of this project
 ```
 git push heroku
