@@ -33,10 +33,10 @@ npm run startServer
 ## Production:
 Depending on how you want to go about deploying your web-app, this project is equipped to automatically deploy a web-server to serve static-content of your app on Heroku. However, you can easily build the app and deploy manually wherever you want.
 
-### Heroku 
+### Heroku
 * Follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) to get heroku toolbelt on your machine
 * Check in all your code using git
-* Deploy your web-app using [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app) 
+* Deploy your web-app using [these instructions](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app)
   - TODO working on a docker image which can be deployed to heroku with one easy step
 After that, you can push up all of your changes to heroku and heroku will run all of the necessary scripts added to **Procfile** in the root of this project
 ```
@@ -57,3 +57,4 @@ Special thanks to [facebook](https://github.com/facebook), [Evil Martians](https
 
 This framework is only the beginning. There are hundreds of other resources out there.  All you gotta do is look for them. You can start [here](https://github.com/reactjs).
 
+When I mentioned cross-platform, I have tested this project on Windows, Mac, and Linux(Chromebook running Ubuntu). Please let me know if you experience any issues in installation with any of these platforms, or if you're using any other platforms.
