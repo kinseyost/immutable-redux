@@ -40,7 +40,7 @@ Depending on how you want to go about deploying your web-app, this project is eq
   - TODO working on a docker image which can be deployed to heroku with one easy step
 After that, you can push up all of your changes to heroku and heroku will run all of the necessary scripts added to **Procfile** in the root of this project
 ```
-git push heroku
+git push heroku master
 ```
 ### Build Production ready bundle
 This will issue a command for webpack to bundle all of your js and css and insert their hashed names into /public/index.html.
