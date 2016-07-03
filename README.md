@@ -26,6 +26,7 @@ To get going, just run:
 ```
 npm install; npm start
 ```
+You will also need to have [mongo daemon](https://docs.mongodb.com/manual/installation/) running.
 And start the server:
 ```
 npm run startServer
