@@ -3,8 +3,7 @@ const express = require('express');
 const app = express();
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
-const host = process.env.IP;
-
+const host = process.env.IP || 'localhost';
 app.set('port', (port));
 
 if (isDeveloping) {

@@ -3,6 +3,14 @@ import styles from './App.css';
 import Navbar from './components/Navbar.js';
 import io from 'socket.io-client';
 const host = process.env.IP;
+import Perf from 'react-addons-perf';
+const devMode = process.env.NODE_ENV !== 'production';
+
+
+if (devMode) {
+  console.log(devMode);
+  window.Perf = Perf;
+}
 
 const socket = io.connect(':8081');
 
