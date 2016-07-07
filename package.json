@@ -16,6 +16,7 @@
     "react",
     "redux",
     "immutablejs",
+    "immutable",
     "reactjs",
     "boilerplate",
     "hot",
@@ -25,7 +26,14 @@
     "live",
     "edit",
     "webpack",
-    "heroku"
+    "heroku",
+    "mongo",
+    "mongodb",
+    "socketio",
+    "web-sockets",
+    "socket-io",
+    "mongoose",
+    "nodemon"
   ],
   "author": "Kinsey Van Ost <kinsey.vanost@gmail.com> (http://github.com/kinseyost)",
   "license": "MIT",
