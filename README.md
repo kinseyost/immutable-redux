@@ -1,5 +1,5 @@
 # immutable-redux
-The *perfect* framework for your next cross-platform, enterprise web-application using [react](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [immutable](https://facebook.github.io/immutable-js/).
+The *perfect* framework for your next cross-platform, enterprise web-application using [react](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [immutable-js](https://facebook.github.io/immutable-js/).
 There are so many libraries to choose from these days. A few of them come running to the forefront when it comes to developing your next website or application.
 This project is set up to get your project into motion with the latest and greatest simply by adding to this setup.  
 
@@ -21,7 +21,7 @@ What you get:
 
 Why you should use immutable data:
 
-When passing immutable props into your component, you will gain substantial improvements to updates when rendering. When working with `react-redux`, your `@connect`ed props will utilize [shallow-render](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js), which during `shouldComponentUpdate` can utilize `===` to compare immutable props to determine whether or not the component should update.
+When passing immutable props into your component, you will gain substantial improvements to updates when rendering. When working with `react-redux`, your `@connect`ed props will utilize [shallowEqual](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js), which during `shouldComponentUpdate` can utilize `===` to compare immutable props to determine whether or not the component should update.
 
 To get going, just run:
 ```
