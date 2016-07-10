@@ -4,7 +4,7 @@
   "description": "A playground for working with react, redux, and immutablejs",
   "scripts": {
     "start": "node server.js",
-    "startServer": "nodemon --watch server server/index.js",
+    "startServer": "nodemon server/index.js --exec babel-node --presets es2015,stage-2",
     "build": "webpack -p --config webpack.production.config.js --progress",
     "lint": "eslint src"
   },
@@ -43,6 +43,7 @@
   "homepage": "https://github.com/kinseyost/immutable-redux",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
@@ -50,6 +51,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-2": "^6.11.0",
     "css-loader": "^0.23.1",
     "eslint": "^2.10.2",
     "eslint-plugin-import": "^1.8.0",

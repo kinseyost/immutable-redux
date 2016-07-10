@@ -1,11 +1,11 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-var userSchema = mongoose.schema({
+export const userSchema = mongoose.Schema({
   name: String,
   phone: String,
   email: String,
   street: String,
   City: String,
   State: String,
-  Zip: Number
-})
+  Zip: Number,
+});
