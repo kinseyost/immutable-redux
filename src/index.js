@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import store from './store';
 import App from './App';
-import Page1 from './components/Page1.js';
+import Rsvp from './components/Rsvp.js';
 import Page2 from './components/Page2.js';
 // styles reset
 import './styles/reset.css';
@@ -13,8 +13,8 @@ ReactDOM.render(
   <Provider store={ store }>
     <Router history={ browserHistory }>
       <Route path='/' component={ App }>
-	<IndexRoute component={ Page1 }/>
-        <Route path='page1' component={ Page1 } />
+	<IndexRoute component={ Rsvp }/>
+        <Route path='page1' component={ Rsvp } />
         <Route path='page2' component={ Page2 } />
       </Route>
     </Router>
