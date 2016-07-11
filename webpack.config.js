@@ -15,6 +15,11 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/',
   },
+  resolve: {
+  root: [
+    path.resolve('./src')
+  ]
+},
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.tpl.html',
@@ -33,6 +38,7 @@ module.exports = {
       test: /\.js?$/,
       exclude: /node_modules/,
       loader: 'babel',
+
     }, {
       test: /\.json?$/,
       loader: 'json',
