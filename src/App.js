@@ -8,7 +8,6 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 
 if (devMode) {
-  console.log(devMode);
   window.Perf = Perf;
 }
 
