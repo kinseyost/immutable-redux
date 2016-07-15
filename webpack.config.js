@@ -16,10 +16,10 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
-  root: [
-    path.resolve('./src')
-  ]
-},
+    root: [
+      path.resolve('./src'),
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.tpl.html',
