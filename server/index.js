@@ -16,6 +16,7 @@ const host = process.env.IP;
 io.on('connection', (socket) => {
   console.log('client connected');
   saveRSVP(socket);
+  socket.on('io', action => console.log(action));
 });
 
 server.listen(8081, () => {
