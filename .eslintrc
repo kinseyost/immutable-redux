@@ -261,7 +261,7 @@
     // These rules are only relevant to ES6 environments and are off by default.
     //
     "arrow-body-style": [2, "as-needed"], // require braces in arrow function body
-    "arrow-parens": [2, "always"], // require parens in arrow function arguments
+    "arrow-parens": [0, "as-needed"], // require parens in arrow function arguments
     "arrow-spacing": 2, // require space before/after arrow function's arrow (fixable)
     "constructor-super": 2, // verify calls of super() in constructors (recommended)
     "generator-star-spacing": [2, "before"], // enforce spacing around the * in generator functions (fixable)
