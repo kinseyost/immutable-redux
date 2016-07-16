@@ -1,3 +1,5 @@
+/* eslint-disable no-console*/
+
 import express from 'express';
 import http from 'http';
 import socketIO from 'socket.io';
@@ -9,19 +11,25 @@ import { saveRSVP } from './listeners.js';
 const app = express();
 const server = http.Server(app);
 const io = socketIO(server);
-const host = process.env.IP;
+const port = 8081;
 
 // TODO store and retreive user data from mongo
 
 io.on('connection', (socket) => {
   console.log('client connected');
   saveRSVP(socket);
-  socket.on('io', action => console.log(action));
+  socket.on('io', action => {
+    const modifiedAction = action;
+    modifiedAction.modified = 'I got modified by the server';
+    console.log(modifiedAction);
+    socket.emit('io', modifiedAction);
+  }
+
+);
 });
 
-server.listen(8081, () => {
-  console.log(`listening on :8081`);
-
+server.listen(port, () => {
+  console.log(`listening on :${port}`);
 });
 
 mongoose.connect('mongodb://localhost/test');
