@@ -6,7 +6,7 @@ import socketIO from 'socket.io';
 import mongoose from 'mongoose';
 import { userModel } from './models.js';
 
-import { saveRSVP } from './listeners.js';
+import * as listeners from './listeners.js';
 
 const app = express();
 const server = http.Server(app);
@@ -17,15 +17,10 @@ const port = 8081;
 
 io.on('connection', (socket) => {
   console.log('client connected');
-  saveRSVP(socket);
   socket.on('io', action => {
-    const modifiedAction = action;
-    modifiedAction.modified = 'I got modified by the server';
-    console.log(modifiedAction);
+    const modifiedAction = listeners[action.type](action);
     socket.emit('io', modifiedAction);
-  }
-
-);
+  });
 });
 
 server.listen(port, () => {

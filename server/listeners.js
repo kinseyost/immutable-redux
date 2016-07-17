@@ -1,5 +1,4 @@
-export function saveRSVP(socket) {
-  return socket.on('saveRSVP', () =>{
-    console.log('saving user');
-  });
+export function ADD_USER(action) {
+  console.log('ADD_USER', action);
+  return action;
 }
