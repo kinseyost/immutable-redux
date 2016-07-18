@@ -63,7 +63,7 @@ export default class Rsvp extends Component {
         </div>
         <div>
           <span>Street</span>
-          <input onChange={ this.handleStreeChange } />
+          <input onChange={ this.handleStreetChange } />
         </div>
         <div>
           <span>City</span>

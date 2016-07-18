@@ -5,7 +5,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import store from './store';
 import App from './App';
 import Rsvp from './components/Rsvp.js';
-import Page2 from './components/Page2.js';
+import ViewUsers from './components/ViewUsers.js';
 // styles reset
 import './styles/reset.css';
 
@@ -14,8 +14,8 @@ ReactDOM.render(
     <Router history={ browserHistory }>
       <Route path='/' component={ App }>
 	<IndexRoute component={ Rsvp }/>
-        <Route path='page1' component={ Rsvp } />
-        <Route path='page2' component={ Page2 } />
+        <Route path='rsvp' component={ Rsvp } />
+        <Route path='viewUsers' component={ ViewUsers } />
       </Route>
     </Router>
   </Provider>

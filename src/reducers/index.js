@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux-immutablejs';
-import addUser from './addUser.js'
+import userInfo from './users.js';
 
 export default combineReducers({
-  addUser,
+  userInfo,
 });

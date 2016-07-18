@@ -7,3 +7,10 @@ export function addUser(user) {
     io: true,
   };
 }
+
+export function fetchUsers() {
+  return {
+    type: types.FETCH_USERS,
+    io: true,
+  };
+}
