@@ -4,7 +4,6 @@ import express from 'express';
 import http from 'http';
 import socketIO from 'socket.io';
 import mongoose from 'mongoose';
-import { userModel } from './models.js';
 
 import * as listeners from './listeners.js';
 

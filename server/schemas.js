@@ -5,7 +5,7 @@ export const userSchema = mongoose.Schema({
   phone: String,
   email: String,
   street: String,
-  City: String,
-  State: String,
-  Zip: Number,
+  city: String,
+  state: String,
+  zip: String,
 });
