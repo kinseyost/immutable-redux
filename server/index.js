@@ -16,8 +16,8 @@ const port = 8081;
 
 io.on('connection', (socket) => {
   console.log('client connected');
-  socket.on('io', action => {
-    const modifiedAction = listeners[action.type](action);
+  socket.on('io', async function (action) {
+    const modifiedAction = await listeners[action.type](action);
     socket.emit('io', modifiedAction);
   });
 });

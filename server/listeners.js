@@ -12,3 +12,13 @@ export function ADD_USER(action) {
   });
   return action;
 }
+
+export async function FETCH_USERS(action) {
+  await UserModel.find((err, allUsers) => {
+    if (err) {
+      return console.error(err);
+    }
+    action.users = allUsers;
+  });
+  return action;
+}
