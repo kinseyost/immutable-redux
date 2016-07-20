@@ -2,6 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addUser } from 'actions/userActions.js';
+import styles from './Rsvp.css';
+import Input from './Input.js';
+import Button from './Button.js';
 
 const propTypes = {
   addNewUser: PropTypes.func,
@@ -48,37 +51,53 @@ export default class Rsvp extends Component {
 
   render() {
     return (
-      <div>
+      <div className={ styles.FormWrapper }>
         <div>
           <span>Name</span>
-          <input onChange={ this.handleNameChange } />
+          <Input
+            onChange={ this.handleNameChange }
+          />
         </div>
         <div>
           <span>Email</span>
-          <input onChange={ this.handleEmailChange } />
+          <Input
+            onChange={ this.handleEmailChange }
+          />
         </div>
         <div>
           <span>Phone</span>
-          <input onChange={ this.handlePhoneChange } />
+          <Input
+            type='number'
+            className={ styles.AreaCode }
+            onChange={ this.handlePhoneChange }
+          />
         </div>
         <div>
           <span>Street</span>
-          <input onChange={ this.handleStreetChange } />
+          <Input
+            onChange={ this.handleStreetChange }
+          />
         </div>
         <div>
           <span>City</span>
-          <input onChange={ this.handleCityChange } />
+          <Input
+            onChange={ this.handleCityChange }
+          />
         </div>
         <div>
           <span>State</span>
-          <input onChange={ this.handleStateChange } />
+          <Input
+            onChange={ this.handleStateChange }
+          />
         </div>
         <div>
           <span>Zip</span>
-          <input onChange={ this.handleZipChange } />
+          <Input
+            onChange={ this.handleZipChange }
+          />
         </div>
         <div>
-          <button onClick={ this.handleSubmit }>Submit</button>
+          <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>
       </div>
     );
