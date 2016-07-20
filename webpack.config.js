@@ -47,5 +47,5 @@ module.exports = {
       loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader',
     }],
   },
-  postcss: [require('autoprefixer')],
+  postcss: [require('autoprefixer'), require('postcss-nested')],
 };
