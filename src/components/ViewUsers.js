@@ -26,23 +26,23 @@ export default class ViewUsers extends Component {
       <div className={ styles.Header }>
         <div className={ styles.Cell }>Name</div>
         <div className={ styles.Cell }>Email</div>
-        <div className={ styles.Cell }>Phone</div>
+        <div className={ styles.Phone }>Phone</div>
         <div className={ styles.Cell }>Street</div>
         <div className={ styles.Cell }>City</div>
-        <div className={ styles.Cell }>State</div>
-        <div className={ styles.Cell }>Zip</div>
+        <div className={ styles.State }>State</div>
+        <div className={ styles.Zip }>Zip</div>
       </div>
     );
 
     const list = users && users.map((user) =>
       <div className={ styles.Row } key={ user.get('_id') }>
-        <div className={ styles.Cell }> { user.get('name') }</div>
-        <div className={ styles.Cell }> { user.get('email') }</div>
-        <div className={ styles.Cell }> { user.get('phone') }</div>
-        <div className={ styles.Cell }> { user.get('street') }</div>
-        <div className={ styles.Cell }> { user.get('city') }</div>
-        <div className={ styles.Cell }> { user.get('state') }</div>
-        <div className={ styles.Cell }> { user.get('zip') }</div>
+        <div className={ styles.Cell } title={ user.get('name') }> { user.get('name') }</div>
+        <div className={ styles.Cell } title={ user.get('email') }> { user.get('email') }</div>
+        <div className={ styles.Phone } title={ user.get('phone') }> { user.get('phone') }</div>
+        <div className={ styles.Cell } title={ user.get('street') }> { user.get('street') }</div>
+        <div className={ styles.Cell } title={ user.get('city') }> { user.get('city') }</div>
+        <div className={ styles.State } title={ user.get('state') }> { user.get('state') }</div>
+        <div className={ styles.Zip } title={ user.get('zip') }> { user.get('zip') }</div>
       </div>
     );
     return (
