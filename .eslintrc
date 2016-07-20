@@ -312,7 +312,7 @@
     // JSX-specific rules
     //
     "react/jsx-boolean-value": [2, "always"], // Enforce boolean attributes notation in JSX (fixable)
-    "react/jsx-closing-bracket-location": [2, {"selfClosing": "after-props", "nonEmpty": "after-props"}], // Validate closing bracket location in JSX
+    "react/jsx-closing-bracket-location": [0], // Validate closing bracket location in JSX
     "react/jsx-curly-spacing": [2, "always"], // Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
     "react/jsx-equals-spacing": 2, // Enforce or disallow spaces around equal signs in JSX attributes
     "react/jsx-handler-names": [2, {"eventHandlerPrefix": "handle", "eventHandlerPropPrefix": "on"}], // Enforce event handler naming conventions in JSX
