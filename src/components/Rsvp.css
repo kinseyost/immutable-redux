@@ -2,14 +2,9 @@
   padding: 30px;
   width: 260px;
   margin: auto;
-  div {
+  input {
     margin-bottom: 10px;
   }
-}
-
-.AreaCode {
-  composes: Input from 'components/Input.css';
-  width: 40px;
 }
 
 .Button {

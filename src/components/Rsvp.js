@@ -52,50 +52,35 @@ export default class Rsvp extends Component {
   render() {
     return (
       <div className={ styles.FormWrapper }>
-        <div>
-          <span>Name</span>
-          <Input
-            onChange={ this.handleNameChange }
-          />
-        </div>
-        <div>
-          <span>Email</span>
-          <Input
-            onChange={ this.handleEmailChange }
-          />
-        </div>
-        <div>
-          <span>Phone</span>
-          <Input
-            type='number'
-            className={ styles.AreaCode }
-            onChange={ this.handlePhoneChange }
-          />
-        </div>
-        <div>
-          <span>Street</span>
-          <Input
-            onChange={ this.handleStreetChange }
-          />
-        </div>
-        <div>
-          <span>City</span>
-          <Input
-            onChange={ this.handleCityChange }
-          />
-        </div>
-        <div>
-          <span>State</span>
-          <Input
-            onChange={ this.handleStateChange }
-          />
-        </div>
-        <div>
-          <span>Zip</span>
-          <Input
-            onChange={ this.handleZipChange }
-          />
-        </div>
+        <Input
+          placeholder='Name'
+          onChange={ this.handleNameChange }
+        />
+        <Input
+          placeholder='Email'
+          onChange={ this.handleEmailChange }
+        />
+        <Input
+          type='number'
+          placeholder='Phone'
+          onChange={ this.handlePhoneChange }
+        />
+        <Input
+          placeholder='Street'
+          onChange={ this.handleStreetChange }
+        />
+        <Input
+          placeholder='City'
+          onChange={ this.handleCityChange }
+        />
+        <Input
+          placeholder='State'
+          onChange={ this.handleStateChange }
+        />
+        <Input
+          placeholder='Zip'
+          onChange={ this.handleZipChange }
+        />
         <div>
           <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>
