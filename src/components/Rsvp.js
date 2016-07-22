@@ -51,7 +51,7 @@ export default class Rsvp extends Component {
 
   render() {
     return (
-      <div className={ styles.FormWrapper }>
+      <form className={ styles.FormWrapper }>
         <Input
           placeholder='Name'
           onChange={ this.handleNameChange }
@@ -84,7 +84,7 @@ export default class Rsvp extends Component {
         <div>
           <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>
-      </div>
+      </form>
     );
   }
 }

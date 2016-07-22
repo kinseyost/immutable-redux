@@ -1,12 +1,14 @@
 .FormWrapper {
-  padding: 30px;
-  width: 260px;
-  margin: auto;
-  input {
-    margin-bottom: 10px;
-  }
-}
-
-.Button {
-  background: #88f888;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #666666;
+  max-width: 300px;
+  min-width: 150px;
+  border: 2px solid #bdc3c7;
+  line-height: 1.231;
+  border-radius: 6px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-top: 15px;
 }
