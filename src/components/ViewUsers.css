@@ -10,7 +10,7 @@
   flex: 0 0 auto;
   display: flex;
   background: #efefef;
-  padding: 5px;
+  padding: 5px 0;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
