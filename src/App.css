@@ -12,4 +12,5 @@
 .Content {
   flex: 1 auto;
   overflow: auto;
+  background: #666;
 }
