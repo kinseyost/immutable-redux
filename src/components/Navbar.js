@@ -4,10 +4,9 @@ import NavItem from './NavItem.js';
 
 const propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.array,
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
   ]),
-  to: PropTypes.string,
 };
 
 export default function Navbar() {
