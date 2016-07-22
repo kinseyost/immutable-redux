@@ -1,3 +1,10 @@
 .Button {
-  background: #88f888;
+  text-align: center;
+  background: #4da54d;
+  padding: 10px;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  width: 100%;
+  color: #ffffff;
 }

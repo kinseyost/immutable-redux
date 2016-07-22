@@ -12,7 +12,9 @@ const propTypes = {
 export default function Button({ className = styles.Button, children, ...other }) {
   return (
     <button { ...other } className={ className }>
-    { children }
+      <div>
+      { children }
+      </div>
     </button>
   );
 }
