@@ -1,0 +1,20 @@
+.InputWrapper {
+  width: 100%;
+  display: block;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.Select {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #bdc3c7;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  outline: none;
+  box-sizing: border-box;
+  appearance: normal;
+  font-size: 1em;
+  width: 100%;
+}

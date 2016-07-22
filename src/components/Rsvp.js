@@ -5,6 +5,7 @@ import { addUser } from 'actions/userActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
+import StateSelector from './StateSelector.js';
 
 const propTypes = {
   addNewUser: PropTypes.func,
@@ -52,6 +53,7 @@ export default class Rsvp extends Component {
   render() {
     return (
       <form className={ styles.FormWrapper }>
+        <div className={ styles.Header }>RSVP</div>
         <Input
           placeholder='Name'
           onChange={ this.handleNameChange }
@@ -73,10 +75,7 @@ export default class Rsvp extends Component {
           placeholder='City'
           onChange={ this.handleCityChange }
         />
-        <Input
-          placeholder='State'
-          onChange={ this.handleStateChange }
-        />
+        <StateSelector />
         <Input
           placeholder='Zip'
           onChange={ this.handleZipChange }
