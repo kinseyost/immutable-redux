@@ -7,7 +7,7 @@ const propTypes = {
 
 export default function Input({ className = styles.Input, ...other }) {
   return (
-    <input { ...other } className={ className } />
+    <span className={ styles.InputWrapper }><input { ...other } className={ className } /></span>
   );
 }
 
