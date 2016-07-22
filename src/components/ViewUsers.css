@@ -1,12 +1,18 @@
 .Table {
   display: flex;
   flex-direction: column;
+  background: #fff;
+  margin: 15px;
+  border-radius: 6px;
 }
 
 .Header {
   flex: 0 0 auto;
   display: flex;
   background: #efefef;
+  padding: 5px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .Row {
@@ -20,6 +26,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 20px;
+  padding: 5px;
 }
 
 .Phone {
