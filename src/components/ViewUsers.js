@@ -47,8 +47,10 @@ export default class ViewUsers extends Component {
     );
     return (
       <div className={ styles.Table }>
-      { header }
-      { list }
+        { header }
+        <div className={ styles.TableBody }>
+        { list }
+        </div>
       </div>
     );
   }

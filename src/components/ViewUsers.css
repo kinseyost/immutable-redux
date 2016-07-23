@@ -4,6 +4,7 @@
   background: #fff;
   margin: 15px;
   border-radius: 6px;
+  height: calc(100vh - 60px)
 }
 
 .Header {
@@ -13,6 +14,11 @@
   padding: 5px 0;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
+}
+
+.TableBody {
+  flex: 1;
+  overflow: auto;
 }
 
 .Row {
