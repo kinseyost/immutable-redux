@@ -5,7 +5,7 @@ import { addUser } from 'actions/userActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import StateSelector from './StateSelector.js';
+import { findDOMNode } from 'react-dom';
 
 const propTypes = {
   addNewUser: PropTypes.func,
@@ -15,75 +15,72 @@ const propTypes = {
   addNewUser: bindActionCreators(addUser, dispatch),
 }))
 export default class Rsvp extends Component {
-  handleSubmit = () => {
-    // TODO get all the user info and send it to addUser.
-    const { name, email, phone, street, city, state, zip } = this.state;
-    this.props.addNewUser({ name, email, phone, street, city, state, zip });
+  constructor(props) {
+    super(props);
+    this.inputRefs = {};
   }
 
-  handleNameChange = (e) => {
-    const name = e.target.value;
-    this.setState({ name });
+  handleSubmit = () => {
+    // TODO get all the user info and send it to addUser.
+    const { name, email, phone, street, city, state, zip } = this.inputRefs;
+    this.props.addNewUser({
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      street: street.value,
+      city: city.value,
+      state: state.value,
+      zip: zip.value,
+    });
+    Object.keys(this.inputRefs).forEach(input => {
+      input.value = '';
+    });
   }
-  handleEmailChange = (e) => {
-    const email = e.target.value;
-    this.setState({ email });
-  }
-  handlePhoneChange = (e) => {
-    const phone = e.target.value;
-    this.setState({ phone });
-  }
-  handleStreetChange = (e) => {
-    const street = e.target.value;
-    this.setState({ street });
-  }
-  handleCityChange = (e) => {
-    const city = e.target.value;
-    this.setState({ city });
-  }
-  handleStateChange = (e) => {
-    const state = e.target.value;
-    this.setState({ state });
-  }
-  handleZipChange = (e) => {
-    const zip = e.target.value;
-    this.setState({ zip });
+
+  saveRefsByName = (component) => {
+    if (component) {
+      const refName = component.getAttribute('placeholder').toLowerCase();
+      this.inputRefs[refName] = component;
+    }
   }
 
   render() {
     return (
-      <form className={ styles.FormWrapper }>
+      <div className={ styles.FormWrapper }>
         <div className={ styles.Header }>RSVP</div>
         <Input
           placeholder='Name'
-          onChange={ this.handleNameChange }
+          getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='Email'
-          onChange={ this.handleEmailChange }
+          getInputRef={ this.saveRefsByName }
         />
         <Input
           type='number'
           placeholder='Phone'
-          onChange={ this.handlePhoneChange }
+          getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='Street'
-          onChange={ this.handleStreetChange }
+          getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='City'
-          onChange={ this.handleCityChange }
+          getInputRef={ this.saveRefsByName }
         />
-        <StateSelector />
+        <Input
+          placeholder='State'
+          getInputRef={ this.saveRefsByName }
+        />
         <Input
           placeholder='Zip'
-          onChange={ this.handleZipChange }
+          getInputRef={ this.saveRefsByName }
         />
         <div>
           <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>
-      </form>
+      </div>
     );
   }
 }
