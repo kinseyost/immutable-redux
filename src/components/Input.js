@@ -3,11 +3,18 @@ import styles from './Input.css';
 
 const propTypes = {
   className: PropTypes.string,
+  getInputRef: PropTypes.func,
 };
 
-export default function Input({ className = styles.Input, ...other }) {
+export default function Input({ className = styles.Input, getInputRef, ...other }) {
   return (
-    <span className={ styles.InputWrapper }><input { ...other } className={ className } /></span>
+    <span className={ styles.InputWrapper }>
+      <input
+        ref={ (c) => getInputRef(c) }
+        className={ className }
+        { ...other }
+      />
+    </span>
   );
 }
 
