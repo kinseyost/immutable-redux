@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import styles from './App.css';
-import Navbar from './components/Navbar.js';
+import Navbar from 'components/Navbar.js';
 import Perf from 'react-addons-perf';
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -16,9 +16,9 @@ const propTypes = {
 export default function App(props) {
   return (
     <div className={ styles.Skeleton }>
-      <div className={ styles.Header }>
+      <header className={ styles.Header }>
         <Navbar />
-      </div>
+      </header>
       <div className={ styles.Content }>
         { props.children }
       </div>

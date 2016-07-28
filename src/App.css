@@ -6,11 +6,11 @@
 
 .Header {
   flex: 0 auto;
-  background: #220AC3;
+  background: #dbffd0;
 }
 
 .Content {
   flex: 1 auto;
   overflow: auto;
-  background: #666;
+  background: #fff;
 }

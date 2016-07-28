@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import styles from './Navbar.css';
 import NavItem from './NavItem.js';
+import Logo from 'components/Logo.js';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -11,10 +12,13 @@ const propTypes = {
 
 export default function Navbar() {
   return (
-    <ul className={ styles.Navbar }>
-      <NavItem to='/rsvp'>RSVP</NavItem>
-      <NavItem to='/viewUsers'>Users</NavItem>
-    </ul>
+    <nav>
+      <Logo />
+      <ul className={ styles.Navbar }>
+        <NavItem to='/rsvp'>RSVP</NavItem>
+        <NavItem to='/viewUsers'>Users</NavItem>
+      </ul>
+    </nav>
   );
 }
 

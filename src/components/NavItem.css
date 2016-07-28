@@ -10,8 +10,8 @@
 
 .NavItemActive {
   composes: NavItem;
-  background: #666;
-  color: #DDD;
+  background: #fff;
+  color: #333;
   transition: background 600ms ease;
 }
 
