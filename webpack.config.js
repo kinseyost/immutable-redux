@@ -34,18 +34,23 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [{
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-
-    }, {
-      test: /\.json?$/,
-      loader: 'json',
-    }, {
-      test: /\.css$/,
-      loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader',
-    }],
+    loaders: [
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+      }, {
+        test: /\.json?$/,
+        loader: 'json',
+      }, {
+        test: /\.css$/,
+        loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader',
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|woff)$/,
+        loader: 'url-loader?limit=8192',
+      },
+    ],
   },
   postcss: [require('autoprefixer'), require('postcss-nested')],
 };
