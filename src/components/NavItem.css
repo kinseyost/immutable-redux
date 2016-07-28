@@ -12,6 +12,7 @@
   composes: NavItem;
   background: #666;
   color: #DDD;
+  transition: background 600ms ease;
 }
 
 .NavItemWrapper {
