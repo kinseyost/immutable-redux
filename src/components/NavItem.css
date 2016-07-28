@@ -3,12 +3,18 @@
   background: #333;
   color: white;
   border: 1px solid #ddd;
-  margin-left: 10px;
+  border-bottom: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
-.ActiveLink {
+.NavItemActive {
   composes: NavItem;
-  background: white;
-  color: #333;
-  border-bottom: none;
+  background: #666;
+  color: #DDD;
+}
+
+.NavItemWrapper {
+  padding: 4px 7px;
+  margin: 7px 0 0 7px;
 }
