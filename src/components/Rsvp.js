@@ -33,7 +33,7 @@ export default class Rsvp extends Component {
       zip: zip.value,
     });
     Object.keys(this.inputRefs).forEach(input => {
-      input.value = '';
+      this.inputRefs[input].value = '';
     });
   }
 
