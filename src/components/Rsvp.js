@@ -5,7 +5,7 @@ import { addUser } from 'actions/userActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import { findDOMNode } from 'react-dom';
+import Notification from './Notification.js';
 
 const propTypes = {
   addNewUser: PropTypes.func,
@@ -35,6 +35,8 @@ export default class Rsvp extends Component {
     Object.keys(this.inputRefs).forEach(input => {
       this.inputRefs[input].value = '';
     });
+    // TODO validate and change this to redux workflow.
+    this.setState({ submitted: true });
   }
 
   saveRefsByName = (component) => {
@@ -45,6 +47,8 @@ export default class Rsvp extends Component {
   }
 
   render() {
+    const submitted = this.state && this.state.submitted;
+
     return (
       <div className={ styles.FormWrapper }>
         <div className={ styles.Header }>RSVP</div>
@@ -80,6 +84,9 @@ export default class Rsvp extends Component {
         <div>
           <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>
+        {
+          submitted && <Notification>Thank You!</Notification>
+        }
       </div>
     );
   }

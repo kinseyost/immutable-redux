@@ -1,0 +1,10 @@
+.Notification {
+  position: fixed;
+  top: 0;
+  left: 15px;
+  height: 70px;
+  background: green;
+  color: white;
+  width: calc(100% - 30px);
+
+}
