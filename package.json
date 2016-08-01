@@ -82,6 +82,7 @@
     "mongodb": "^2.1.21",
     "mongoose": "^4.5.3",
     "react": "^15.2.0",
+    "react-addons-css-transition-group": "^15.3.0",
     "react-dom": "^15.2.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.2",
