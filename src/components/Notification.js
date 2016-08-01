@@ -23,8 +23,17 @@ export default class Notification extends Component {
   render() {
     const { shown, msg } = this.props;
     return (
-      <ReactCSSTransitionGroup>
-        <div className={ styles.Notification }>{ msg }</div>
+      <ReactCSSTransitionGroup
+        className={ styles.Notification }
+        transitionName={ {
+          enter: styles.Enter,
+          leave: styles.Leave,
+        } }
+      >
+      {
+        shown &&
+          <div>{ msg }</div>
+      }
       </ReactCSSTransitionGroup>
    );
   }

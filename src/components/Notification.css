@@ -1,6 +1,6 @@
 .Notification {
   position: fixed;
-  top: 0;
+  top: -50px;
   left: 15px;
   background: green;
   color: white;
@@ -11,4 +11,12 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   transition: opacity 300ms ease;
+}
+
+.Enter {
+  top: 0;
+}
+
+.Leave {
+  top: -50px;
 }
