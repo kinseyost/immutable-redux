@@ -84,9 +84,6 @@ export default class Rsvp extends Component {
         <div>
           <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>
-        {
-          submitted && <Notification>Thank You!</Notification>
-        }
       </div>
     );
   }

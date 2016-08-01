@@ -2,9 +2,13 @@
   position: fixed;
   top: 0;
   left: 15px;
-  height: 70px;
   background: green;
   color: white;
-  width: calc(100% - 30px);
-
+  width: calc(100% - 60px);
+  text-align: center;
+  vertical-align: center;
+  padding: 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: opacity 300ms ease;
 }
