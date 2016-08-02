@@ -43,7 +43,7 @@ export default class Notification extends Component {
       >
       {
         shown &&
-          <div>{ msg }</div>
+          <div onClick={ this.hideNotification }>{ msg }</div>
       }
       </ReactCSSTransitionGroup>
    );
