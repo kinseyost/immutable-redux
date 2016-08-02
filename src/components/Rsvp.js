@@ -2,17 +2,19 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addUser } from 'actions/userActions.js';
+import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import Notification from './Notification.js';
 
 const propTypes = {
   addNewUser: PropTypes.func,
+  showThanksNotification: PropTypes.func,
 };
 
 @connect(null, (dispatch) => ({
   addNewUser: bindActionCreators(addUser, dispatch),
+  showThanksNotification: bindActionCreators(showNotification, dispatch),
 }))
 export default class Rsvp extends Component {
   constructor(props) {
@@ -32,11 +34,13 @@ export default class Rsvp extends Component {
       state: state.value,
       zip: zip.value,
     });
+    const { showThanksNotification } = this.props;
     Object.keys(this.inputRefs).forEach(input => {
       this.inputRefs[input].value = '';
     });
     // TODO validate and change this to redux workflow.
     this.setState({ submitted: true });
+    showThanksNotification({ shown: true, msg: 'Thank You' });
   }
 
   saveRefsByName = (component) => {
@@ -47,8 +51,6 @@ export default class Rsvp extends Component {
   }
 
   render() {
-    const submitted = this.state && this.state.submitted;
-
     return (
       <div className={ styles.FormWrapper }>
         <div className={ styles.Header }>RSVP</div>

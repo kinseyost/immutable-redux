@@ -10,13 +10,10 @@
   padding: 15px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  transition: opacity 300ms ease;
+  transition: top 300ms ease;
 }
 
-.Enter {
+.NotificationShown {
+  composes: Notification;
   top: 0;
-}
-
-.Leave {
-  top: -50px;
 }
