@@ -56,6 +56,7 @@ export default class Rsvp extends Component {
         <div className={ styles.Header }>RSVP</div>
         <Input
           placeholder='Name'
+          required
           getInputRef={ this.saveRefsByName }
         />
         <Input
