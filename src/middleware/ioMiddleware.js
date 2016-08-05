@@ -7,7 +7,7 @@ socket.on('io', (action) => {
   store.dispatch(action);
 });
 
-const ioMiddleware = reduxStore => next => action => {
+const ioMiddleware = () => next => action => {
   if (action.io) {
     socket.emit('io', action);
   }

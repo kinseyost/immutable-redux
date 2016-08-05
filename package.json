@@ -6,7 +6,7 @@
     "start": "node server.js",
     "startServer": "nodemon server/index.js --exec babel-node --presets es2015,stage-2",
     "build": "webpack -p --config webpack.production.config.js --progress",
-    "lint": "eslint src"
+    "lint": "./node_modules/.bin/eslint src --max-warnings 0"
   },
   "repository": {
     "type": "git",

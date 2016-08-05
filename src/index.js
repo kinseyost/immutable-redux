@@ -13,7 +13,7 @@ ReactDOM.render(
   <Provider store={ store }>
     <Router history={ browserHistory }>
       <Route path='/' component={ App }>
-	<IndexRoute component={ Rsvp }/>
+        <IndexRoute component={ Rsvp } />
         <Route path='rsvp' component={ Rsvp } />
         <Route path='viewUsers' component={ ViewUsers } />
       </Route>
