@@ -6,6 +6,7 @@ const propTypes = {
   getInputRef: PropTypes.func,
   required: PropTypes.bool,
   placeholder: PropTypes.string,
+  error: PropTypes.string,
 };
 
 export default function Input({
@@ -13,6 +14,7 @@ export default function Input({
   required,
   placeholder,
   getInputRef,
+  error,
   ...other,
 }) {
   return (
@@ -24,6 +26,7 @@ export default function Input({
         { ...other }
       />
       { required && <div className={ styles.Required }>*</div> }
+      { error && <div>{ error }</div> }
     </span>
   );
 }

@@ -6,26 +6,44 @@ import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
+import { required } from 'utils/validate.js';
+
+const validators = {
+  name: required,
+};
 
 const propTypes = {
   addNewUser: PropTypes.func,
-  showThanksNotification: PropTypes.func,
+  showNotification: PropTypes.func,
 };
 
 @connect(null, (dispatch) => ({
   addNewUser: bindActionCreators(addUser, dispatch),
-  showThanksNotification: bindActionCreators(showNotification, dispatch),
+  showNotification: bindActionCreators(showNotification, dispatch),
 }))
 export default class Rsvp extends Component {
-  constructor(props) {
-    super(props);
-    this.inputRefs = {};
-  }
+  state = { errors: {} };
+  inputRefs = {};
 
   handleSubmit = () => {
     // TODO get all the user info and send it to addUser.
+    const { showNotification, addNewUser } = this.props; // eslint-disable-line no-shadow
+    const formValues = this.getFormValues();
+
+    const valid = this.validateFields(formValues);
+
+    if (valid) {
+      addNewUser(formValues);
+      showNotification({ shown: true, msg: 'Thank You', status: 'success' });
+      this.clearInputs();
+    } else {
+      showNotification({ shown: true, msg: 'Please correct errors and resubmit', status: 'warning' });
+    }
+  }
+
+  getFormValues() {
     const { name, email, phone, street, city, state, zip } = this.inputRefs;
-    this.props.addNewUser({
+    return {
       name: name.value,
       email: email.value,
       phone: phone.value,
@@ -33,14 +51,30 @@ export default class Rsvp extends Component {
       city: city.value,
       state: state.value,
       zip: zip.value,
+    };
+  }
+
+  validateFields = (formValues) => {
+    let valid = true;
+    const errors = {};
+    Object.keys(formValues).forEach(key => {
+      if (validators[key]) {
+        const error = validators[key](formValues[key]);
+        if (error) {
+          valid = false;
+        }
+        errors[key] = error;
+      }
     });
-    const { showThanksNotification } = this.props;
+    // TODO change this to redux
+    this.setState({ errors });
+    return valid;
+  }
+
+  clearInputs() {
     Object.keys(this.inputRefs).forEach(input => {
       this.inputRefs[input].value = '';
     });
-    // TODO validate and change this to redux workflow.
-    this.setState({ submitted: true });
-    showThanksNotification({ shown: true, msg: 'Thank You' });
   }
 
   saveRefsByName = (component) => {
@@ -51,12 +85,14 @@ export default class Rsvp extends Component {
   }
 
   render() {
+    const { errors } = this.state;
     return (
       <div className={ styles.FormWrapper }>
         <div className={ styles.Header }>RSVP</div>
         <Input
           placeholder='Name'
           required
+          error={ errors.name }
           getInputRef={ this.saveRefsByName }
         />
         <Input

@@ -2,7 +2,6 @@
   position: fixed;
   top: -50px;
   left: 15px;
-  background: green;
   color: white;
   width: calc(100% - 60px);
   text-align: center;
@@ -13,7 +12,32 @@
   transition: top 300ms ease;
 }
 
-.NotificationShown {
+.NotificationSuccess {
   composes: Notification;
+  background: green;
+}
+
+.NotificationSuccessShown {
+  composes: NotificationSuccess;
+  top: 0;
+}
+
+.NotificationWarning {
+  composes: Notification;
+  background: yellow;
+}
+
+.NotificationWarningShown {
+  composes: NotificationWarning;
+  top: 0;
+}
+
+.NotificationError {
+  composes: Notification;
+  background: red;
+}
+
+.NotificationErrorShown {
+  composes: NotificationError;
   top: 0;
 }
