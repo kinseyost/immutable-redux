@@ -18,3 +18,11 @@
   font-size: 1em;
   width: 100%;
 }
+
+.Required {
+  position: relative;
+  margin-top: -23px;
+  margin-right: 13px;
+  float: right;
+  color: red;
+}

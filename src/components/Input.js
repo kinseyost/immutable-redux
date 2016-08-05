@@ -20,9 +20,10 @@ export default function Input({
       <input
         ref={ (c) => getInputRef(c) }
         className={ className }
-        placeholder={ required && `* ${placeholder}` || placeholder }
+        placeholder={ placeholder }
         { ...other }
       />
+      { required && <div className={ styles.Required }>*</div> }
     </span>
   );
 }
