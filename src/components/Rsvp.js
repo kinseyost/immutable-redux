@@ -6,10 +6,11 @@ import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import { required } from 'utils/validate.js';
+import { required, validEmail } from 'utils/validate.js';
 
 const validators = {
   name: required,
+  email: validEmail,
 };
 
 const propTypes = {
@@ -97,6 +98,8 @@ export default class Rsvp extends Component {
         />
         <Input
           placeholder='Email'
+          required
+          error={ errors.email }
           getInputRef={ this.saveRefsByName }
         />
         <Input
