@@ -6,14 +6,14 @@ import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import { required, validEmail, maxLength, minLength } from 'utils/validate.js';
+import { createValidator, required, validEmail, maxLength, minLength } from 'utils/validate.js';
 
-const validators = {
+const validator = createValidator({
   name: required,
   email: validEmail,
   phone: maxLength(10),
   zip: [minLength(5), maxLength(5)],
-};
+});
 
 const propTypes = {
   addNewUser: PropTypes.func,
@@ -58,26 +58,8 @@ export default class Rsvp extends Component {
   }
 
   validateFields = (formValues) => {
-    let valid = true;
-    const errors = {}; // TODO move this into validate and return error object.
-    Object.keys(formValues).forEach(key => {
-      if (validators[key]) {
-        if (Array.isArray(validators[key])) {
-          validators[key].forEach(validator => {
-            const errorText = validator(formValues[key]);
-            if (errorText) {
-              errors[key] = errorText;
-            }
-          });
-        } else {
-          const error = validators[key](formValues[key]);
-          if (error) {
-            valid = false;
-          }
-          errors[key] = error;
-        }
-      }
-    });
+    const errors = validator(formValues);
+    const valid = Object.keys(errors).length === 0;
     // TODO change this to redux
     this.setState({ errors });
     return valid;

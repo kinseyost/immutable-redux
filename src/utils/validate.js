@@ -37,3 +37,25 @@ export const minLength = (length) => (input) => {
   }
   return '';
 };
+
+export const createValidator = (validationObject) => (formValues) => {
+  const errors = {};
+  Object.keys(formValues).forEach(key => {
+    if (validationObject[key]) {
+      if (Array.isArray(validationObject[key])) {
+        validationObject[key].forEach(validator => {
+          const errorText = validator(formValues[key]);
+          if (errorText) {
+            errors[key] = errorText;
+          }
+        });
+      } else {
+        const error = validationObject[key](formValues[key]);
+        if (error) {
+          errors[key] = error;
+        }
+      }
+    }
+  });
+  return errors;
+};
