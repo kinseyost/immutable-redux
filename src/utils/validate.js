@@ -23,3 +23,17 @@ export function validEmail(input) {
   }
   return '';
 }
+
+export const maxLength = (length) => (input) => {
+  if (input.trim().length > length) {
+    return `Exceeds max length of ${length}`;
+  }
+  return '';
+};
+
+export const minLength = (length) => (input) => {
+  if (input.trim().length < length) {
+    return `Must be at least ${length} characters`;
+  }
+  return '';
+};

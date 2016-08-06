@@ -6,11 +6,13 @@ import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import { required, validEmail } from 'utils/validate.js';
+import { required, validEmail, maxLength, minLength } from 'utils/validate.js';
 
 const validators = {
   name: required,
   email: validEmail,
+  phone: maxLength(10),
+  zip: [minLength(5), maxLength(5)],
 };
 
 const propTypes = {
@@ -57,14 +59,23 @@ export default class Rsvp extends Component {
 
   validateFields = (formValues) => {
     let valid = true;
-    const errors = {};
+    const errors = {}; // TODO move this into validate and return error object.
     Object.keys(formValues).forEach(key => {
       if (validators[key]) {
-        const error = validators[key](formValues[key]);
-        if (error) {
-          valid = false;
+        if (Array.isArray(validators[key])) {
+          validators[key].forEach(validator => {
+            const errorText = validator(formValues[key]);
+            if (errorText) {
+              errors[key] = errorText;
+            }
+          });
+        } else {
+          const error = validators[key](formValues[key]);
+          if (error) {
+            valid = false;
+          }
+          errors[key] = error;
         }
-        errors[key] = error;
       }
     });
     // TODO change this to redux
@@ -106,6 +117,7 @@ export default class Rsvp extends Component {
           type='number'
           placeholder='Phone'
           getInputRef={ this.saveRefsByName }
+          error={ errors.phone }
         />
         <Input
           placeholder='Street'
@@ -121,6 +133,7 @@ export default class Rsvp extends Component {
         />
         <Input
           placeholder='Zip'
+          error={ errors.zip }
           getInputRef={ this.saveRefsByName }
         />
         <div>
