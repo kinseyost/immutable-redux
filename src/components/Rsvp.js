@@ -6,12 +6,12 @@ import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
-import { createValidator, required, validEmail, maxLength, minLength } from 'utils/validate.js';
+import { createValidator, validPhone, required, validEmail, maxLength, minLength } from 'utils/validate.js';
 
 const validator = createValidator({
   name: required,
   email: validEmail,
-  phone: maxLength(10),
+  phone: validPhone,
   zip: [minLength(5), maxLength(5)],
 });
 
@@ -96,7 +96,6 @@ export default class Rsvp extends Component {
           getInputRef={ this.saveRefsByName }
         />
         <Input
-          type='number'
           placeholder='Phone'
           getInputRef={ this.saveRefsByName }
           error={ errors.phone }

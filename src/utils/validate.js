@@ -38,6 +38,14 @@ export const minLength = (length) => (input) => {
   return '';
 };
 
+export const validPhone = (input) => {
+  const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if (!phoneRegex.test(input)) {
+    return 'Invalid Phone number';
+  }
+  return '';
+};
+
 export const createValidator = (validationObject) => (formValues) => {
   const errors = {};
   Object.keys(formValues).forEach(key => {
