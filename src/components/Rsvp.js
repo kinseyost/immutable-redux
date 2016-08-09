@@ -6,6 +6,7 @@ import { showNotification } from 'actions/componentActions.js';
 import styles from './Rsvp.css';
 import Input from './Input.js';
 import Button from './Button.js';
+import Toggle from 'react-toggle';
 import { createValidator, validPhone, required, validEmail, maxLength, minLength } from 'utils/validate.js';
 
 const validator = createValidator({
@@ -25,7 +26,7 @@ const propTypes = {
   showNotification: bindActionCreators(showNotification, dispatch),
 }))
 export default class Rsvp extends Component {
-  state = { errors: {} };
+  state = { errors: {}, attending: true };
   inputRefs = {};
 
   handleSubmit = () => {
@@ -46,6 +47,7 @@ export default class Rsvp extends Component {
 
   getFormValues() {
     const { name, email, phone, street, city, state, zip } = this.inputRefs;
+    const { attending } = this.state;
     return {
       name: name.value,
       email: email.value,
@@ -54,6 +56,7 @@ export default class Rsvp extends Component {
       city: city.value,
       state: state.value,
       zip: zip.value,
+      attending,
     };
   }
 
@@ -76,6 +79,11 @@ export default class Rsvp extends Component {
       const refName = component.getAttribute('placeholder').toLowerCase();
       this.inputRefs[refName] = component;
     }
+  }
+
+  handleRSVPToggle = (e) => {
+    console.log(e.value);
+    this.setState({ attending: e.value });
   }
 
   render() {
@@ -117,6 +125,14 @@ export default class Rsvp extends Component {
           error={ errors.zip }
           getInputRef={ this.saveRefsByName }
         />
+        <div className={ styles.ToggleRow }>
+          <label>
+            <Toggle
+              defaultChecked={ this.state.attending }
+              onChange={ this.handleRSVPToggle } />
+            <span className={ styles.ToggleLabelSpan }>Attending</span>
+          </label>
+        </div>
         <div>
           <Button onClick={ this.handleSubmit }>Submit</Button>
         </div>

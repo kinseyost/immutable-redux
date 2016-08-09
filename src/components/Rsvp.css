@@ -27,3 +27,14 @@
   border: 2px solid #bdc3c7;
   margin-bottom: 15px;
 }
+
+.ToggleRow {
+  padding: 15px;
+  text-align: center;
+}
+
+.ToggleLabelSpan {
+  margin-top: -15px;
+  margin-left: 6px;
+  display: inherit;
+}

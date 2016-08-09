@@ -14,7 +14,7 @@
 
 .NotificationSuccess {
   composes: Notification;
-  background: green;
+  background: #007700;
 }
 
 .NotificationSuccessShown {
@@ -24,7 +24,8 @@
 
 .NotificationWarning {
   composes: Notification;
-  background: yellow;
+  background: #ffe925;
+  color: #333;
 }
 
 .NotificationWarningShown {
@@ -34,7 +35,7 @@
 
 .NotificationError {
   composes: Notification;
-  background: red;
+  background: #ff2900;
 }
 
 .NotificationErrorShown {

@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import styles from './App.css';
+import './styles/globalStyles.css';
 import Navbar from 'components/Navbar.js';
 import Perf from 'react-addons-perf';
 import Notification from 'components/Notification.js';
