@@ -82,8 +82,8 @@ export default class Rsvp extends Component {
   }
 
   handleRSVPToggle = (e) => {
-    console.log(e.value);
-    this.setState({ attending: e.value });
+    const attending = e.target.checked;
+    this.setState({ attending });
   }
 
   render() {
