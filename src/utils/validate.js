@@ -18,21 +18,21 @@ export function validEmail(input) {
     '\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|',
     '\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$',
   ].join(''));
-  if (!emailRegexp.test(input)) {
+  if (input.trim() && !emailRegexp.test(input)) {
     return 'Invalid email';
   }
   return '';
 }
 
 export const maxLength = (length) => (input) => {
-  if (input.trim().length > length) {
+  if (input.trim() && input.trim().length > length) {
     return `Exceeds max length of ${length}`;
   }
   return '';
 };
 
 export const minLength = (length) => (input) => {
-  if (input.trim().length < length) {
+  if (input.trim() && input.trim().length < length) {
     return `Must be at least ${length} characters`;
   }
   return '';
@@ -40,7 +40,7 @@ export const minLength = (length) => (input) => {
 
 export const validPhone = (input) => {
   const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  if (!phoneRegex.test(input)) {
+  if (input.trim() && !phoneRegex.test(input)) {
     return 'Invalid Phone number';
   }
   return '';

@@ -10,7 +10,7 @@ import { createValidator, validPhone, required, validEmail, maxLength, minLength
 
 const validator = createValidator({
   name: required,
-  email: validEmail,
+  email: [required, validEmail],
   phone: validPhone,
   zip: [minLength(5), maxLength(5)],
 });
