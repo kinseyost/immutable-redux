@@ -52,3 +52,11 @@
   flex: 0 auto;
   width: 60px;
 }
+
+.Attending {
+  composes: Cell;
+  flex: 0 auto;
+  text-align: center;
+  width: 50px;
+
+}
