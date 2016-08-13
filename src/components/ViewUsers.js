@@ -39,10 +39,7 @@ export default class ViewUsers extends Component {
       <div className={ styles.Row } key={ user.get('_id') }>
         <div className={ styles.Cell } title={ user.get('name') }> { user.get('name') }</div>
         <div className={ styles.Cell } title={ user.get('email') }> { user.get('email') }</div>
-        <div
-          className={ styles.Attending }
-          title={ user.get('attending') && user.get('attending').toString() }
-        >
+        <div className={ styles.Attending }>
           { user.get('attending') && '✔' }
         </div>
         <div className={ styles.Phone } title={ user.get('phone') }> { user.get('phone') }</div>
