@@ -4,7 +4,6 @@
   "description": "A playground for working with react, redux, and immutablejs",
   "scripts": {
     "start": "node server.js",
-    "startServer": "nodemon server/index.js --exec babel-node --presets es2015,stage-2",
     "build": "webpack -p --config webpack.production.config.js --progress",
     "lint": "./node_modules/.bin/eslint src --max-warnings 0"
   },
@@ -74,10 +73,7 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
-    "express": "^4.13.4",
     "immutable": "^3.8.1",
-    "mongodb": "^2.1.21",
-    "mongoose": "^4.5.3",
     "react": "^15.2.0",
     "react-addons-css-transition-group": "^15.3.0",
     "react-dom": "^15.2.0",
@@ -88,7 +84,6 @@
     "redux-immutablejs": "0.0.8",
     "redux-thunk": "^2.1.0",
     "reselect": "^2.5.3",
-    "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.8"
   },
   "engines": {
