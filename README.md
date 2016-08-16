@@ -1,4 +1,7 @@
 # immutable-redux
+
+This is 1/2 of the entire project, please see [immutable-redux-server](https://github.com/kinseyost/immutable-redux-server) to get the second 1/2.
+
 The *perfect* framework for your next cross-platform, enterprise web-application using [react](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [immutable-js](https://facebook.github.io/immutable-js/).
 There are so many libraries to choose from these days. A few of them come running to the forefront when it comes to developing your next website or application.
 This project is set up to get your project into motion with the latest and greatest simply by adding to this setup.  
