@@ -57,6 +57,5 @@
   composes: Cell;
   flex: 0 auto;
   text-align: center;
-  width: 50px;
-
+  width: 100px;
 }

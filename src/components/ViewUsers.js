@@ -26,7 +26,7 @@ export default class ViewUsers extends Component {
       <div className={ styles.Header }>
         <div className={ styles.Cell }>Name</div>
         <div className={ styles.Cell }>Email</div>
-        <div className={ styles.Cell }>Attending</div>
+        <div className={ styles.Attending }>Attending</div>
         <div className={ styles.Phone }>Phone</div>
         <div className={ styles.Cell }>Street</div>
         <div className={ styles.Cell }>City</div>
@@ -40,7 +40,7 @@ export default class ViewUsers extends Component {
         <div className={ styles.Cell } title={ user.get('name') }> { user.get('name') }</div>
         <div className={ styles.Cell } title={ user.get('email') }> { user.get('email') }</div>
         <div className={ styles.Attending }>
-          { user.get('attending') && '✔' }
+          { user.get('attending') === true && '✔' }
         </div>
         <div className={ styles.Phone } title={ user.get('phone') }> { user.get('phone') }</div>
         <div className={ styles.Cell } title={ user.get('street') }> { user.get('street') }</div>
