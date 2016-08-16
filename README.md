@@ -26,15 +26,20 @@ Why you should use immutable data:
 
 When passing immutable props into your component, you will gain substantial improvements to updates when rendering. When working with `react-redux`, your `@connect`ed props will utilize [shallowEqual](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js), which during `shouldComponentUpdate` can utilize `===` to compare immutable props to determine whether or not the component should update.
 
-To get going, just run:
+Install the dependencies:
 ```
-npm install; npm start
+npm install
 ```
-You will also need to have [mongo daemon](https://docs.mongodb.com/manual/installation/) running.
-And start the server:
+
+Start the dev-server:
 ```
-npm run startServer
+npm start
 ```
+
+Then start the server:
+See instructions at [immutable-redux-server](https://github.com/kinseyost/immutable-redux-server)
+
+
 ## Production:
 Depending on how you want to go about deploying your web-app, this project is equipped to automatically deploy a web-server to serve static-content of your app on Heroku. However, you can easily build the app and deploy manually wherever you want.
 
