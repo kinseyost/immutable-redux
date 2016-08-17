@@ -18,8 +18,6 @@ What you get:
 * [postcss](https://github.com/postcss/postcss) - Toolbelt for all your future css needs.
 * [eslint](http://eslint.org/) - Static analysis of your code
 * [heroku](https://devcenter.heroku.com/) - Automated deployment using `git push heroku`
-* [mongodb](https://docs.mongodb.com/) - Document based database
-* [mongoose](http://mongoosejs.com/index.html) - javascript ODM for mongodb
 * [chrome-react-perf](https://github.com/crysislinux/chrome-react-perf) - react performance tools via chrome dev-tools
 
 Why you should use immutable data:
