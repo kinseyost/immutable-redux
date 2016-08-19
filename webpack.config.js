@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var vars = require('./src/styles/vars/');
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -52,5 +53,5 @@ module.exports = {
       },
     ],
   },
-  postcss: [require('autoprefixer'), require('postcss-nested')],
+  postcss: [require('autoprefixer'), require('postcss-nested'), require('postcss-map')({ maps: [vars] } )],
 };
