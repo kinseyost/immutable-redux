@@ -6,11 +6,8 @@
 }
 
 .Input {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #bdc3c7;
-  transition: border-color 0.6s;
-  border-radius: 6px;
+  border: map(border);
+  border-radius: map(borderRadius);
   padding: 6px 10px;
   outline: none;
   box-sizing: border-box;

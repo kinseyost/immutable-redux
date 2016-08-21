@@ -3,8 +3,8 @@
   background: map(primaryColor);
   padding: 10px;
   margin: 0;
-  border: 2px solid transparent;
-  border-radius: 6px;
+  border: map(transparentBorder);
+  border-radius: map(borderRadius);
   width: 100%;
   color: #ffffff;
 }

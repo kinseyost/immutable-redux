@@ -3,7 +3,7 @@
   flex-direction: column;
   background: #fff;
   margin: 15px;
-  border-radius: 6px;
+  border-radius: map(borderRadius);
   height: calc(100vh - 120px);
 }
 
@@ -12,8 +12,8 @@
   display: flex;
   background: #efefef;
   padding: 5px 0;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
+  border-top-right-radius: map(borderRadius);
+  border-top-left-radius: map(borderRadius);
 }
 
 .TableBody {
