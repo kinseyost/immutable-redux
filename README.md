@@ -66,3 +66,6 @@ Special thanks to [facebook](https://github.com/facebook), [Evil Martians](https
 This framework is only the beginning. There are hundreds of other resources out there.  All you gotta do is look for them. You can start [here](https://github.com/reactjs).
 
 When I mentioned cross-platform, I have tested this project on Windows, Mac, and Linux([Chromebook running Ubuntu](https://github.com/kinseyost/chromebook-dev)). Please let me know if you experience any issues in installation with any of these platforms, or if you're using any other platforms.
+
+# Deployment
+The plan for deployment of an application is dependent on the infrastructure. To try and cut down on this, I am attempting to serve this application via containers, see [Docker](https://github.com/kinseyost).
