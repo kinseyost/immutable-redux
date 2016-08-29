@@ -76,7 +76,7 @@ export default class Rsvp extends Component {
 
   saveRefsByName = (component) => {
     if (component) {
-      const refName = component.getAttribute('placeholder').toLowerCase();
+      const refName = component.getAttribute('name');
       this.inputRefs[refName] = component;
     }
   }
@@ -93,36 +93,43 @@ export default class Rsvp extends Component {
         <div className={ styles.Header }>RSVP</div>
         <Input
           placeholder='Name'
+          name='name'
           required
           error={ errors.name }
           getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='Email'
+          name='email'
           required
           error={ errors.email }
           getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='Phone'
+          name='phone'
           getInputRef={ this.saveRefsByName }
           error={ errors.phone }
         />
         <Input
           placeholder='Street'
+          name='street'
           getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='City'
+          name='city'
           getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='State'
+          name='state'
           getInputRef={ this.saveRefsByName }
         />
         <Input
           placeholder='Zip'
           error={ errors.zip }
+          name='zip'
           getInputRef={ this.saveRefsByName }
         />
         <div className={ styles.ToggleRow }>
