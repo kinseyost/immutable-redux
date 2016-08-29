@@ -38,7 +38,7 @@ export default class Rsvp extends Component {
 
     if (valid) {
       addNewUser(formValues);
-      showNotification({ shown: true, msg: 'Thank You', status: 'success' });
+      showNotification({ shown: true, msg: 'Successfully submitted RSVP, Thank You', status: 'success' });
       this.clearInputs();
     } else {
       showNotification({ shown: true, msg: 'Please correct errors and resubmit', status: 'warning' });
