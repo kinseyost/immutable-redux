@@ -40,7 +40,7 @@ export default class ViewUsers extends Component {
         <div className={ styles.Cell } title={ user.get('name') }> { user.get('name') }</div>
         <div className={ styles.Cell } title={ user.get('email') }> { user.get('email') }</div>
         <div className={ styles.Attending }>
-          { user.get('attending') === true && '✔' }
+          { user.get('attending') === true && '✓' }
         </div>
         <div className={ styles.Phone } title={ user.get('phone') }> { user.get('phone') }</div>
         <div className={ styles.Cell } title={ user.get('street') }> { user.get('street') }</div>
