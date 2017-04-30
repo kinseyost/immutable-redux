@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addUser } from 'actions/userActions.js';
 import { showNotification } from 'actions/componentActions.js';
-import styles from './Rsvp.css';
+import styles from './SignUpForm.css';
 import Input from './Input.js';
 import Button from './Button.js';
 import Toggle from 'react-toggle';
@@ -25,7 +25,7 @@ const propTypes = {
   addNewUser: bindActionCreators(addUser, dispatch),
   showNotification: bindActionCreators(showNotification, dispatch),
 }))
-export default class Rsvp extends Component {
+export default class SignUpForm extends Component {
   state = { errors: {}, attending: true };
   inputRefs = {};
 
@@ -38,7 +38,7 @@ export default class Rsvp extends Component {
 
     if (valid) {
       addNewUser(formValues);
-      showNotification({ shown: true, msg: 'Successfully submitted RSVP, Thank You', status: 'success' });
+      showNotification({ shown: true, msg: 'Thank you for signing up', status: 'success' });
       this.clearInputs();
     } else {
       showNotification({ shown: true, msg: 'Please correct errors and resubmit', status: 'warning' });
@@ -81,7 +81,7 @@ export default class Rsvp extends Component {
     }
   }
 
-  handleRSVPToggle = (e) => {
+  handleNewsLetterToggle = (e) => {
     const attending = e.target.checked;
     this.setState({ attending });
   }
@@ -90,7 +90,7 @@ export default class Rsvp extends Component {
     const { errors } = this.state;
     return (
       <div className={ styles.FormWrapper }>
-        <div className={ styles.Header }>RSVP</div>
+        <div className={ styles.Header }>Sign Up</div>
         <Input
           placeholder='Name'
           name='name'
@@ -136,8 +136,8 @@ export default class Rsvp extends Component {
           <label>
             <Toggle
               defaultChecked={ this.state.attending }
-              onChange={ this.handleRSVPToggle } />
-            <span className={ styles.ToggleLabelSpan }>Attending</span>
+              onChange={ this.handleNewsLetterToggle } />
+            <span className={ styles.ToggleLabelSpan }>Sign up for Newsletter</span>
           </label>
         </div>
         <div>
@@ -148,4 +148,4 @@ export default class Rsvp extends Component {
   }
 }
 
-Rsvp.propTypes = propTypes;
+SignUpForm.propTypes = propTypes;

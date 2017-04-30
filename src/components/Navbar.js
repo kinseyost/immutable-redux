@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav>
       <Logo />
       <ul className={ styles.Navbar }>
-        <NavItem to='/rsvp'>RSVP</NavItem>
+        <NavItem to='/signup'>Sign Up</NavItem>
         <NavItem to='/viewUsers'>Users</NavItem>
       </ul>
     </nav>
