@@ -1,6 +1,6 @@
 .Button {
   text-align: center;
-  background: map(primaryColor);
+  background: map(primaryButtonColor);
   padding: 10px;
   margin: 0;
   border: map(transparentBorder);

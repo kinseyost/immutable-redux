@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: map(primaryFont);
 }
 
 .Header {
   flex: 0 auto;
-  background: #dbffd0;
+  background: map(primaryColor);
 }
 
 .Content {
