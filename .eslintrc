@@ -319,7 +319,7 @@
     "react/jsx-indent-props": [2, 2], // Validate props indentation in JSX
     "react/jsx-indent": [2, 2], // Validate JSX indentation
     "react/jsx-key": 2, // Validate JSX has key prop when in array or iterator
-    "react/jsx-max-props-per-line": [2, {"maximum": 4}], // Limit maximum of props on a single line in JSX
+    "react/jsx-max-props-per-line": [2, {"maximum": 2}], // Limit maximum of props on a single line in JSX
     "react/jsx-no-bind": [2, {"allowArrowFunctions": true}], // Prevent usage of .bind() and arrow functions in JSX props
     "react/jsx-no-duplicate-props": [2, {"ignoreCase": true}], // Prevent duplicate props in JSX
     "react/jsx-no-literals": 0, // Prevent usage of unwrapped JSX strings
