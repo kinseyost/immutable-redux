@@ -13,7 +13,12 @@ const propTypes = {
 export default function NavItem({ children, to }) {
   return (
     <li className={ styles.NavItemWrapper }>
-      <Link className={ styles.NavItem } activeClassName={ styles.NavItemActive } to={ to }>{ children }</Link>
+      <Link
+        className={ styles.NavItem }
+        activeClassName={ styles.NavItemActive }
+        to={ to }>
+        { children }
+      </Link>
     </li>
   );
 }

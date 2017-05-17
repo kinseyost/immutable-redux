@@ -1,0 +1,17 @@
+.Gallery {
+
+}
+
+.GalleryImages {
+  width: 500px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+}
+
+.CurrentImage {
+  height: 400px;
+}

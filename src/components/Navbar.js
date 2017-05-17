@@ -15,8 +15,16 @@ export default function Navbar() {
     <nav>
       <Logo />
       <ul className={ styles.Navbar }>
-        <NavItem to='/signup'>Sign Up</NavItem>
-        <NavItem to='/viewUsers'>Users</NavItem>
+        <NavItem to='/Home'>Home</NavItem>
+        <NavItem to='/Gallery'>Gallery</NavItem>
+        <NavItem to='/Behavior'>Behavior</NavItem>
+        <NavItem to='/Diet'>Diet</NavItem>
+        <NavItem to='/Habitat'>Habitat</NavItem>
+        <NavItem to='/Mating'>Mating</NavItem>
+        <NavItem to='/Biology'>Biology</NavItem>
+        <NavItem to='/MiscFacts'>MiscFacts</NavItem>
+        <NavItem to='/Communication'>Communication</NavItem>
+        <NavItem to='/PopCulture'>PopCulture</NavItem>
       </ul>
     </nav>
   );
