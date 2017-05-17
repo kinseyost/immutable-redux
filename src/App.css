@@ -18,3 +18,11 @@
   display: flex;
   justify-content: center;
 }
+
+.Title {
+  position: absolute;
+  left: 104px;
+  top: 17px;
+  font-size: 35px;
+  color: white;
+}
