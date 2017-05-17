@@ -14,4 +14,7 @@
   flex: 1 auto;
   overflow: auto;
   background: #fff;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
 }
