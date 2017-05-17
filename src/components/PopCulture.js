@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from 'images/guayaki.png';
+import logo from 'images/biglittle.png';
 export default function Mating({ ...props }) {
   return (
     <div>
-      Pop culture
+      <img src={ logo } />
     </div>
   );
 }
