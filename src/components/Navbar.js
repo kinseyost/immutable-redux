@@ -16,13 +16,12 @@ export default function Navbar() {
       <Logo />
       <ul className={ styles.Navbar }>
         <NavItem to='/Home'>Home</NavItem>
-        <NavItem to='/Behavior'>Animal Behavior</NavItem>
+        <NavItem to='/Gallery'>Gallery</NavItem>
+        <NavItem to='/Behavior'>Behavior</NavItem>
         <NavItem to='/Diet'>Diet</NavItem>
-        <NavItem to='/Gallery'>Images</NavItem>
-        <NavItem to='/Habitat'>Habit</NavItem>
-        <NavItem to='/Habitat'>Name</NavItem>
-        <NavItem to='/Habitat'>Mating</NavItem>
-        <NavItem to='/Habitat'>Biology</NavItem>
+        <NavItem to='/Habitat'>Habitat</NavItem>
+        <NavItem to='/Mating'>Mating</NavItem>
+        <NavItem to='/Biology'>Biology</NavItem>
       </ul>
     </nav>
   );
