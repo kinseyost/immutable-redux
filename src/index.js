@@ -11,6 +11,9 @@ import Diet from './components/Diet.js';
 import Habitat from './components/Habitat.js';
 import Mating from './components/Mating.js';
 import Biology from './components/Biology.js';
+import MiscFacts from './components/MiscFacts.js';
+import Communication from './components/Communication.js';
+import PopCulture from './components/PopCulture.js';
 import './styles/reset.css';
 
 ReactDOM.render(
@@ -25,6 +28,9 @@ ReactDOM.render(
         <Route path='Habitat' component={ Habitat } />
         <Route path='Mating' component={ Mating } />
         <Route path='Biology' component={ Biology } />
+        <Route path='MiscFacts' component={ MiscFacts } />
+        <Route path='Communication' component={ Communication } />
+        <Route path='PopCulture' component={ PopCulture } />
       </Route>
     </Router>
   </Provider>

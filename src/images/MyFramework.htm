@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/Behavior -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>MyFramework</title>
+    <link rel="stylesheet" type="text/css" href="./MyFramework_files/reset.css">
+  <style type="text/css">.App---Skeleton---1cAYk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+.App---Header---3mO0c {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 auto;
+          flex: 0 auto;
+  background: #3d93c5;
+}
+
+.App---Content---1RCPT {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  overflow: auto;
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App---Title---2x147 {
+  position: absolute;
+  left: 104px;
+  top: 17px;
+  font-size: 35px;
+  color: white;
+}
+
+.App---Background---2TRAB {
+  background: red;
+}
+</style><style type="text/css">/* Toggler styles */
+.react-toggle {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+.react-toggle-screenreader-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.react-toggle--disabled {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+.react-toggle-track {
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: #4D4D4D;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.react-toggle:hover .react-toggle-track {
+    background-color: #000000;
+}
+.react-toggle--checked .react-toggle-track {
+    background-color: #19AB27;
+}
+.react-toggle.react-toggle--checked:hover .react-toggle-track {
+    background-color: #128D15;
+}
+.react-toggle-track-check {
+    position: absolute;
+    width: 14px;
+    height: 10px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    left: 8px;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+}
+.react-toggle--checked .react-toggle-track-check {
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+}
+.react-toggle-track-x {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    right: 10px;
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+}
+.react-toggle--checked .react-toggle-track-x {
+    opacity: 0;
+}
+.react-toggle-thumb {
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #4D4D4D;
+    border-radius: 50%;
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.react-toggle--checked .react-toggle-thumb {
+    left: 27px;
+    border-color: #19AB27;
+}
+.react-toggle--focus .react-toggle-thumb {
+    box-shadow: 0px 0px 2px 3px #0099E0;
+}
+.react-toggle:active .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 5px #0099E0;
+}
+</style><style type="text/css">.Navbar---Navbar---O5EKC {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+}
+</style><style type="text/css">.NavItem---NavItem---14l6X {
+  padding: 4px 7px;
+  background: #333;
+  color: white;
+  border: 1px solid #bdc3c7;
+  border-bottom: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.NavItem---NavItemActive---2Fink {
+  background: #fff;
+  color: #333;
+  -webkit-transition: background 600ms ease;
+  transition: background 600ms ease;
+}
+
+.NavItem---NavItemWrapper---2rblS {
+  padding: 4px 7px;
+  margin: 7px 0 0 7px;
+}
+</style><style type="text/css">.Logo---Logo---3ofL_ {
+  height: 65px;
+  width: 65px;
+  margin: 10px 10px 3px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+</style><style type="text/css">.Notification---Notification---2LH49 {
+  position: fixed;
+  top: -50px;
+  left: 15px;
+  color: white;
+  width: calc(100% - 60px);
+  text-align: center;
+  vertical-align: center;
+  padding: 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-transition: top 300ms ease;
+  transition: top 300ms ease;
+}
+
+.Notification---NotificationSuccess---Fianf {
+  background: #007700;
+}
+
+.Notification---NotificationSuccessShown---Tjy99 {
+  top: 0;
+}
+
+.Notification---NotificationWarning---1MCtW {
+  background: #ffe925;
+  color: #333;
+}
+
+.Notification---NotificationWarningShown---2PkeS {
+  top: 0;
+}
+
+.Notification---NotificationError---2tabN {
+  background: #ff2900;
+}
+
+.Notification---NotificationErrorShown---1GkiV {
+  top: 0;
+}
+</style><style type="text/css">.SignUpForm---FormWrapper---3OFqN {
+  background-color: #FFFFFF;
+  font-size: 14px;
+  color: #666666;
+  max-width: 300px;
+  min-width: 150px;
+  border: 1px solid #bdc3c7;
+  line-height: 1.231;
+  border-radius: 6px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.SignUpForm---Header---1zgcd {
+  background: #3d93c5;
+  color: #fff;
+  font-size: 24px;
+  margin-top: -17px;
+  margin-left: -17px;
+  width: calc(100% + 0px);
+  padding: 15px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border: 1px solid #bdc3c7;
+  margin-bottom: 15px;
+}
+
+.SignUpForm---ToggleRow---1CQHq {
+  padding: 15px;
+  text-align: center;
+}
+
+.SignUpForm---ToggleLabelSpan---1PPKI {
+  margin-top: -15px;
+  margin-left: 6px;
+  display: inherit;
+}
+</style><style type="text/css">.Gallery---Gallery---ZgeCJ {
+
+}
+
+.Gallery---GalleryImages---sAKCd {
+  width: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  margin-bottom: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-items: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Gallery---CurrentImage---2M2rw {
+  height: 400px;
+}
+</style><style type="text/css">/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	vertical-align: middle;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+label span {
+	vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+</style></head>
+  <body>
+    <div id="root"><div data-reactroot="" class="App---Skeleton---1cAYk"><header class="App---Header---3mO0c"><div class="App---Title---2x147">El Liger</div><nav><img src="./MyFramework_files/8be02d02add328e6ff78d2736ec23bba.jpg" class="Logo---Logo---3ofL_"><ul class="Navbar---Navbar---O5EKC"><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X" href="http://localhost:3000/Home">Home</a></li><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X" href="http://localhost:3000/Gallery">Gallery</a></li><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X NavItem---NavItemActive---2Fink NavItem---NavItem---14l6X" href="http://localhost:3000/Behavior">Behavior</a></li><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X" href="http://localhost:3000/Diet">Diet</a></li><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X" href="http://localhost:3000/Habitat">Habitat</a></li><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X" href="http://localhost:3000/Mating">Mating</a></li><li class="NavItem---NavItemWrapper---2rblS"><a class="NavItem---NavItem---14l6X" href="http://localhost:3000/Biology">Biology</a></li></ul></nav></header><div class="App---Background---2TRAB"><div class="App---Content---1RCPT"><div> Behavior </div></div></div><span class="Notification---NotificationSuccess---Fianf Notification---Notification---2LH49"></span></div></div>
+  <script type="text/javascript" src="./MyFramework_files/main.js"></script>
+
+</body></html>

@@ -18,7 +18,7 @@ const propTypes = {
 export default class SignUpForm extends Component {
   render() {
     return (
-      <div className={ styles.FormWrapper }>
+      <div>
         <img
           src={ logo }
         />
