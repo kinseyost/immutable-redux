@@ -18,6 +18,7 @@ export default function App(props) {
   return (
     <div className={ styles.Skeleton }>
       <header className={ styles.Header }>
+        Liger
         <Navbar />
       </header>
       <div className={ styles.Content }>
