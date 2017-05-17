@@ -21,8 +21,10 @@ export default function App(props) {
         <div className={ styles.Title }>El Liger</div>
         <Navbar />
       </header>
-      <div className={ styles.Content }>
-        { props.children }
+      <div className={ styles.Background }>
+        <div className={ styles.Content }>
+          { props.children }
+        </div>
       </div>
       <Notification />
     </div>
