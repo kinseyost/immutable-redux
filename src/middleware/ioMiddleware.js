@@ -7,10 +7,6 @@ socket.on('io', (action) => {
   store.dispatch(action);
 });
 
-socket.on('message', (action) => {
-  store.dispatch(action);
-});
-
 const ioMiddleware = () => next => action => {
   if (action.io) {
     socket.emit('io', action);
