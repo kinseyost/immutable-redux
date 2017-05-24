@@ -14,6 +14,7 @@ import Biology from './components/Biology.js';
 import MiscFacts from './components/MiscFacts.js';
 import Communication from './components/Communication.js';
 import PopCulture from './components/PopCulture.js';
+import Users from 'src/components/ViewUsers.js';
 import './styles/reset.css';
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path='/' component={ App }>
         <IndexRoute component={ Home } />
         <Route path='Home' component={ Home } />
+        <Route path='Users' component={ Users } />
         <Route path='Gallery' component={ Gallery } />
         <Route path='Behavior' component={ Behavior } />
         <Route path='Diet' component={ Diet } />

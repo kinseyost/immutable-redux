@@ -16,6 +16,7 @@ export default function Navbar() {
       <Logo />
       <ul className={ styles.Navbar }>
         <NavItem to='/Home'>Home</NavItem>
+        <NavItem to='/Users'>Users</NavItem>
         <NavItem to='/Gallery'>Gallery</NavItem>
         <NavItem to='/Behavior'>Behavior</NavItem>
         <NavItem to='/Diet'>Diet</NavItem>
