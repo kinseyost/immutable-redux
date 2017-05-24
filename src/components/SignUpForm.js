@@ -39,7 +39,7 @@ export default class SignUpForm extends Component {
     if (valid) {
       addNewUser(formValues);
       showNotification({ shown: true, msg: 'Thank you for signing up', status: 'success' });
-      this.clearInputs();
+      // this.clearInputs();
     } else {
       showNotification({ shown: true, msg: 'Please correct errors and resubmit', status: 'warning' });
     }

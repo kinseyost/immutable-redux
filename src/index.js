@@ -14,7 +14,7 @@ import Biology from './components/Biology.js';
 import MiscFacts from './components/MiscFacts.js';
 import Communication from './components/Communication.js';
 import PopCulture from './components/PopCulture.js';
-import Users from 'src/components/ViewUsers.js';
+import Users from 'components/ViewUsers.js';
 import './styles/reset.css';
 
 ReactDOM.render(
