@@ -18,10 +18,13 @@ export default function App(props) {
   return (
     <div className={ styles.Skeleton }>
       <header className={ styles.Header }>
+        <div className={ styles.Title }>El Liger</div>
         <Navbar />
       </header>
-      <div className={ styles.Content }>
-        { props.children }
+      <div className={ styles.Background }>
+        <div className={ styles.Content }>
+          { props.children }
+        </div>
       </div>
       <Notification />
     </div>
