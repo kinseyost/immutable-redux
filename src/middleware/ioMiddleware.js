@@ -12,6 +12,7 @@ socket.on('message', (action) => {
 });
 
 socket.on('messageFromEmitter', (action) => {
+  console.log('action comming from emitter', action);
   socket.emit('emit', action);
 });
 
