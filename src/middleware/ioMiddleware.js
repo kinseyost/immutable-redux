@@ -11,6 +11,11 @@ socket.on('message', (action) => {
   store.dispatch(action);
 });
 
+socket.on('messageFromEmitter', (action) => {
+  console.log('action comming from emitter', action);
+  socket.emit('emit', action);
+});
+
 const ioMiddleware = () => next => action => {
   if (action.io) {
     socket.emit('io', action);
