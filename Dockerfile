@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:8
 
 # Prepare app directory
 RUN mkdir -p /usr/src/app
