@@ -52,6 +52,12 @@ module.exports = {
         loader: 'url-loader?limit=8192',
       },
     ],
+    rules: [
+      {
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader' }
+      }
+    ]
   },
   postcss: [require('autoprefixer'), require('postcss-nested'), require('postcss-map')({ maps: [vars] } )],
 };

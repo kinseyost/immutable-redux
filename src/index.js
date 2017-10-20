@@ -5,16 +5,8 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import store from './store';
 import App from './App';
 import Home from './components/SignUpForm.js';
-import Gallery from './components/Gallery.js';
-import Behavior from './components/Behavior.js';
-import Diet from './components/Diet.js';
-import Habitat from './components/Habitat.js';
-import Mating from './components/Mating.js';
-import Biology from './components/Biology.js';
-import MiscFacts from './components/MiscFacts.js';
-import Communication from './components/Communication.js';
-import PopCulture from './components/PopCulture.js';
 import Users from 'components/ViewUsers.js';
+import Uploads from 'components/Uploads.js';
 import './styles/reset.css';
 
 ReactDOM.render(
@@ -24,15 +16,7 @@ ReactDOM.render(
         <IndexRoute component={ Home } />
         <Route path='Home' component={ Home } />
         <Route path='Users' component={ Users } />
-        <Route path='Gallery' component={ Gallery } />
-        <Route path='Behavior' component={ Behavior } />
-        <Route path='Diet' component={ Diet } />
-        <Route path='Habitat' component={ Habitat } />
-        <Route path='Mating' component={ Mating } />
-        <Route path='Biology' component={ Biology } />
-        <Route path='MiscFacts' component={ MiscFacts } />
-        <Route path='Communication' component={ Communication } />
-        <Route path='PopCulture' component={ PopCulture } />
+        <Route path='Uploads' component={ Uploads } />
       </Route>
     </Router>
   </Provider>
